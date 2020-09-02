@@ -37,5 +37,4 @@ class User(AbstractUser):
         choices=CURRENCY_CHOICES, max_length=3, null=True, blank=True
     )
 
-
     superhost = models.BooleanField(default=False)
