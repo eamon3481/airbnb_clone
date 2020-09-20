@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils import timezone
 from . import models
 
 
@@ -7,4 +8,10 @@ class ReservationAdmin(admin.ModelAdmin):
 
     """ Reservation Admin Def """
 
-    pass
+    list_display = (
+        "room",
+        "status",
+        "check_in",
+        "check_out",
+        "guest",
+    )
